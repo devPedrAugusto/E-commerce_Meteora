@@ -1,7 +1,9 @@
 import React from "react";
 import { formatadorMoeda } from "@/utils/formatadorMoeda";
+import { useCarrinho } from "../../hooks/useCarrinho";
 
-const ValorFormatado = ({ valor }) => {
+const ValorFormatado = ({valor}) => {
+  
   return (
     <span
       className="verde-limao text-center text-md-start fw-bold fs-5"

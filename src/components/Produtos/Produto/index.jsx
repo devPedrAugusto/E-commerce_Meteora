@@ -2,6 +2,7 @@ import React from "react";
 import Botao from "@/components/Botao";
 import { formatadorMoeda } from "@/utils/formatadorMoeda";
 
+
 const Produto = ({
   src,
   id,
@@ -11,6 +12,7 @@ const Produto = ({
   preco,
   adicionarProduto,
 }) => {
+
   return (
     <div className="col-12 col-md-6 col-xxl-4 pb-4">
       <div className="card">

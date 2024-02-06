@@ -3,13 +3,16 @@ import Botao from "@/components/Botao";
 import Quantidade from "@/components/Quantidade";
 import ValorFormatado from "@/components/ValorFormatado";
 import InfoItemCarrinho from "./InfoItemCarrinho";
+import { useCarrinho } from "../../hooks/useCarrinho";
 
-const ItemCarrinho = ({
-  itemCarrinho,
+const ItemCarrinho = ({ itemCarrinho }) => {
+
+const {
   removerProdutoCarrinho,
   adicionarProduto,
   removerProduto,
-}) => {
+} = useCarrinho();
+
   return (
     <li key={itemCarrinho.id}>
       <>

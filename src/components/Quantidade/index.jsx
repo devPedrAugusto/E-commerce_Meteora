@@ -21,7 +21,7 @@ const Quantidade = ({ itemCarrinho, adicionarProduto, removerProduto }) => {
         <Botao
           variant="removeItem"
           aria-label="Remover item"
-          handleClick={() => removerProduto(itemCarrinho.id)}
+          handleClick={() => removerProduto(itemCarrinho)}
         >
           -
         </Botao>

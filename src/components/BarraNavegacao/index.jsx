@@ -6,9 +6,12 @@ import CampoTexto from "@/components/CampoTexto";
 import Botao from "@/components/Botao";
 
 import { useLocation } from "react-router-dom";
+import { useCarrinho } from "../../hooks/useCarrinho";
 
-const BarraNavegacao = ({ quantidadeProdutos }) => {
+const BarraNavegacao = () => {
   const location = useLocation();
+  const { quantidadeTotal } = useCarrinho();
+
   const ehAPaginaCarrinho = location.pathname === "/carrinho";
   return (
     <header>
@@ -19,7 +22,7 @@ const BarraNavegacao = ({ quantidadeProdutos }) => {
             <BotaoTogglerMenu />
             <BotaoCarrinho
               className={`d-md-none ${ehAPaginaCarrinho && "d-none"}`}
-              quantidadeProdutos={quantidadeProdutos}
+              quantidadeProdutos={quantidadeTotal}
             />
           </div>
           <div className="collapse navbar-collapse" id="conteudoBarraNavegacao">
@@ -37,7 +40,7 @@ const BarraNavegacao = ({ quantidadeProdutos }) => {
               className={`d-none d-md-block ${
                 ehAPaginaCarrinho && "d-md-none"
               }`}
-              quantidadeProdutos={quantidadeProdutos}
+              quantidadeProdutos={quantidadeTotal}
             />
           </div>
         </div>
