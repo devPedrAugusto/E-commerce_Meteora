@@ -2,17 +2,16 @@ import Menu from "./Menu";
 import Logo from "./Logo";
 import BotaoTogglerMenu from "./BotaoTogglerMenu";
 import BotaoCarrinho from "./BotaoCarrinho";
-import CampoTexto from "@/components/CampoTexto";
-import Botao from "@/components/Botao";
-
-import { useLocation } from "react-router-dom";
 import { useCarrinho } from "../../hooks/useCarrinho";
+import PesquisaProduto from "./PesquisaProduto";
+import { useLocation } from "react-router-dom";
 
 const BarraNavegacao = () => {
   const location = useLocation();
   const { quantidadeTotal } = useCarrinho();
 
   const ehAPaginaCarrinho = location.pathname === "/carrinho";
+
   return (
     <header>
       <nav className="navbar navbar-expand-md bg-black navbar-dark">
@@ -27,19 +26,9 @@ const BarraNavegacao = () => {
           </div>
           <div className="collapse navbar-collapse" id="conteudoBarraNavegacao">
             <Menu />
-            <form className="d-flex" role="search">
-              <CampoTexto
-                className="me-2"
-                type="search"
-                placeholder="Digite o nome do produto"
-                aria-label="Pesquisar"
-              />
-              <Botao type="submit">Pesquisar</Botao>
-            </form>
+            <PesquisaProduto />
             <BotaoCarrinho
-              className={`d-none d-md-block ${
-                ehAPaginaCarrinho && "d-md-none"
-              }`}
+              className={`d-none d-md-block ${ehAPaginaCarrinho && "d-md-none"}`}
               quantidadeProdutos={quantidadeTotal}
             />
           </div>

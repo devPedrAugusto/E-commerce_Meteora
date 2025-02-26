@@ -4,9 +4,9 @@ import Botao from "@/components/Botao";
 import ValorFormatado from "@/components/ValorFormatado";
 import { useCarrinho } from "../../../hooks/useCarrinho";
 
-const ItemCarrinhoSuspenso = ({itemCarrinho}) => {
+const ItemCarrinhoSuspenso = ({ itemCarrinho }) => {
 
-  const {adicionarProduto, removerProduto, removerProdutoCarrinho} = useCarrinho();
+  const { adicionarProduto, removerProduto, removerProdutoCarrinho } = useCarrinho();
 
   return (
     <li>
@@ -24,7 +24,7 @@ const ItemCarrinhoSuspenso = ({itemCarrinho}) => {
               adicionarProduto={adicionarProduto}
               removerProduto={removerProduto}
             />
-            <ValorFormatado valor={itemCarrinho.preco} />
+            <ValorFormatado valor={itemCarrinho.preco * itemCarrinho.quantidade} />
           </div>
           <Botao
             variant="deleteItem"

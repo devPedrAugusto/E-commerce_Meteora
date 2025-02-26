@@ -7,11 +7,11 @@ import { useCarrinho } from "../../hooks/useCarrinho";
 
 const ItemCarrinho = ({ itemCarrinho }) => {
 
-const {
-  removerProdutoCarrinho,
-  adicionarProduto,
-  removerProduto,
-} = useCarrinho();
+  const {
+    removerProdutoCarrinho,
+    adicionarProduto,
+    removerProduto,
+  } = useCarrinho();
 
   return (
     <li key={itemCarrinho.id}>
@@ -23,7 +23,7 @@ const {
             alt={itemCarrinho.alt}
           />
           <InfoItemCarrinho itemCarrinho={itemCarrinho} />
-          <ValorFormatado valor={itemCarrinho.preco} />
+          <ValorFormatado valor={itemCarrinho.preco * itemCarrinho.quantidade} />
           <Quantidade
             itemCarrinho={itemCarrinho}
             adicionarProduto={adicionarProduto}

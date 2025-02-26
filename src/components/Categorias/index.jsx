@@ -4,6 +4,7 @@ import categorias from "@/mocks/categorias.json";
 import Titulo from "@/components/Titulo";
 
 const Categorias = () => {
+
   return (
     <section role="categorias" aria-label="Busque por categoria:">
       <Titulo>Busque por categoria:</Titulo>

@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.card.rounded-0.border-0 {
+  cursor: pointer;
+}
+
 .texto-menor {
   font-size: 13px;
 }

@@ -7,16 +7,17 @@ const estadoInicial = [];
 
 export const CarrinhoProvider = ({ children }) => {
     const [carrinho, dispatch] = useReducer(carrinhoReducer, estadoInicial);
+    const [pesquisaProdutos, setPesquisaProdutos] = useState(null)
     const [valorTotal, setValorTotal] = useState([]);
     const [quantidadeTotal, setQuantidadeTotal] = useState([]);
 
     const { quantidadeTemp, valorTemp } = useMemo(() =>
 
         carrinho.reduce((acumulador, item) => {
-            
-            return{
+
+            return {
                 quantidadeTemp: acumulador.quantidadeTemp + item.quantidade,
-                valorTemp: acumulador.valorTemp + (item.preco * item.quantidade) 
+                valorTemp: acumulador.valorTemp + (item.preco * item.quantidade)
             }
         },
             {
@@ -33,6 +34,8 @@ export const CarrinhoProvider = ({ children }) => {
     return (
         <ContextCarrinho.Provider value={{
             carrinho,
+            setPesquisaProdutos,
+            pesquisaProdutos,
             dispatch,
             valorTotal,
             quantidadeTotal
