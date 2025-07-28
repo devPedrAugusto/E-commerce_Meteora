@@ -1,5 +1,3 @@
-![Meteora](thumbnail.png)
-
 # Meteora - E-commerce de Moda
 
 O Meteora é um projeto de e-commerce em fase de desenvolvimento inicial. Este README fornece informações sobre o projeto, suas funcionalidades e como executá-lo em seu ambiente local.
@@ -8,14 +6,15 @@ O Meteora é um projeto de e-commerce em fase de desenvolvimento inicial. Este R
 
 ## 🔨 Funcionalidades do projeto
 
-Neste estágio inicial de desenvolvimento, o Meteora possui as seguintes funcionalidades:
+O Meteora possui as seguintes funcionalidades:
 
 - Adicionar itens ao carrinho
-- Remover itens do carrinho
-- Visualizar a página do carrinho
-- Deletar itens do carrinho
-
-O [Figma dessa aplicação você encontra aqui](https://www.figma.com/file/R5ATrWK1nC44Eyeo6XZXlr/Meteora---Context-API?node-id=2386%3A2430&mode=dev).
+- Remover itens individualmente
+- Deletar todos os itens do carrinho
+- Visualizar a página do carrinho em tempo real
+- Calcular automaticamente o valor total dos itens
+- Realizar buscas por produtos
+- Filtrar produtos por nome ou categoria
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
